@@ -1,22 +1,22 @@
 # Machine learning enhanced MHD simulations of the Interstellar Medium
-Javier Palau Master's thesis in hybrid ML-numerical simulations of the ISM at the Astro AI Laboratory in Heidelberg University.
+Master's thesis by Javier Palau on hybrid ML-numerical simulations of the ISM, conducted at the Astro AI Laboratory at Heidelberg University.
 ## [Read the thesis here](Javier_Palau_Alegria_Master_Thesis.pdf)
-- For ease of reading in the GitHub website, the Thesis is also split in chapters within the [Chapters folder](Chapters)
+- For ease of reading on the GitHub website, the thesis is also split into chapters within the [Chapters folder](Chapters)
 ## Code & Repositories
 
 The work developed for this thesis is available across the following repositories:
 
-- Super-resolution part: [Super-resolution turbulence](https://github.com/javinukem/super_resolution_turbulence_FNO)
-- Solver-in-the-loop part (Available as a fork): [Astronomix SOL](https://github.com/leo1200/astronomix/tree/sol_tests)
+- Super-resolution: [Super-resolution turbulence](https://github.com/javinukem/super_resolution_turbulence_FNO)
+- Solver-in-the-loop (Available as a fork): [Astronomix SOL](https://github.com/leo1200/astronomix/tree/sol_tests)
 
-The fork builds upon the original project and contains the modifications and extensions developed as part of this thesis within the arena/arena_tests/ solecito and solver_in_the_loop folders.
+The fork contains the modifications and extensions developed as part of this thesis within the arena/arena_tests/ solecito and solver_in_the_loop folders.
 
 
 ## Abstract
 
 In this work, two hybrid machine-learning–numerical methods are studied in the context
-of three dimensional magnetohydrodynamic simulations of the interstellar medium: superresolution
-and solvers-in-the-loop. Superresolution methods are used to recover fine
+of three-dimensional magnetohydrodynamic simulations of the interstellar medium: super-resolution
+and solvers-in-the-loop. Super-resolution methods are used to recover fine
 scale structures from low resolution simulations using Fourier Neural Operators. We
 further introduce an additional parameter to the FNO model that shifts the spectral
 region on which the model is applied. In contrast, solvers-in-the-loop introduce learned
@@ -28,18 +28,17 @@ while maintaining the advantages of numerical methods.
 
 ## Quick look
 ### Super-resolution
-Super-resolution for three-dimensional turbulent hydrodynamical setups has been tested on a dataset covering a limited amount of parameters with succesful results. The models used are based off Fourier Neural Operators and in this work we implement a novel new parameter that modifies the spectral region on which the model acts on. The following image is an example of a UFNO model we trained, the first row is the target state, the second row is the super-resolved state and the third row is the input state. For a deep dive we refer the reader to the full thesis and the code repository [Super-resolution turbulence](https://github.com/javinukem/super_resolution_turbulence_FNO)
+Super-resolution for three-dimensional turbulent hydrodynamical setups has been tested on a dataset covering a limited number of parameters, with successful results. The models used are based on Fourier Neural Operators and in this work we implement a novel parameter that modifies the spectral region on which the model acts on. The following figure shows an example of a UFNO model we trained. The first row shows the target state, the second row shows the super-resolved state, and the third row shows the input state. For a more detailed discussion, we refer the reader to the full thesis and the code repository [Super-resolution turbulence](https://github.com/javinukem/super_resolution_turbulence_FNO)
 
 <img width="4279" height="2078" alt="final_snapshot_comparison" src="https://github.com/user-attachments/assets/356de666-7a2e-401a-a0e2-5b2fa48fc665" />
 
 ### Solver-in-the-loop
-The solver-in-the-loop approach adds an extra term in
-between applications of the simulator PDE. The model interacts only with the local structures not
+The solver-in-the-loop approach adds an extra term between successive applications of the simulation PDE. The model interacts only with the local structures not
 captured by the simulator and thus acts as a residual term. Consequently, the learning
-objective is reduced to a drift term in the simulation space towards the target state. This target state is established at training, and during
-inference we expect the model to have learned the discrepancies between the simulated and target dynamics.
+objective is reduced to a drift term in the simulation space towards the target state. This target state is established during training, and during
+inference, we expect the model to have learned the discrepancies between the simulated and target dynamics.
 
-The following figure summarizes a model trained on an MHD Blast. The model corrects the simulation as it progresses, the error during simulation can be seen in the 4th row. First row shows a slice of the snapshot at train time, second row shows a one-dimensional slice at train time, third row shows the model output against simulation time. For a deep dive we refer the reader to the full thesis and fork code [Astronomix SOL](https://github.com/leo1200/astronomix/tree/sol_tests).
+The following figure summarizes a model trained on an MHD Blast. The model corrects the simulation as it progresses, and the error during the simulation can be seen in the fourth row. The first row shows a slice of the snapshot during training, second row shows a one-dimensional slice at train time, third row shows the model output against simulation time. For a deep dive we refer the reader to the full thesis and fork code [Astronomix SOL](https://github.com/leo1200/astronomix/tree/sol_tests).
 <img width="4504" height="3948" alt="problem_analysis_mhd_blast" src="https://github.com/user-attachments/assets/bc43f7f5-f52b-494f-bbcc-03d41351a5e3" />
 
 ## Author
