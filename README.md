@@ -1,7 +1,7 @@
 # Machine learning enhanced MHD simulations of the Interstellar Medium
 Javier Palau Master's thesis in hybrid ML-numerical simulations of the ISM at the Astro AI Laboratory in Heidelberg University.
 ## [Read the thesis here](Javier_Palau_Alegria_Master_Thesis.pdf)
-
+- For ease of reading in the GitHub website, the Thesis is also split in chapters within the [Chapters folder](Chapters)
 ## Code & Repositories
 
 The work developed for this thesis is available across the following repositories:
