@@ -1,5 +1,4 @@
-# Machine learning enhanced MHD
-simulations of the Interstellar Medium
+# Machine learning enhanced MHD simulations of the Interstellar Medium
 Javier Palau Master's thesis in hybrid ML-numerical simulations of the ISM at the Astro AI Laboratory in Heidelberg University.
 
 
