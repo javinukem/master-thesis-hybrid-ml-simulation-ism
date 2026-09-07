@@ -13,8 +13,8 @@ The fork builds upon the original project and contains the modifications and ext
 ## Abstract
 
 In this work, two hybrid machine-learning–numerical methods are studied in the context
-of three dimensional magnetohydrodynamic simulations of the interstellar medium: su-
-perresolution and solvers-in-the-loop. Superresolution methods are used to recover fine
+of three dimensional magnetohydrodynamic simulations of the interstellar medium: superresolution
+and solvers-in-the-loop. Superresolution methods are used to recover fine
 scale structures from low resolution simulations using Fourier Neural Operators. We
 further introduce an additional parameter to the FNO model that shifts the spectral
 region on which the model is applied. In contrast, solvers-in-the-loop introduce learned
