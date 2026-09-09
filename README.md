@@ -45,7 +45,7 @@ The following figure summarizes a model trained on an MHD Blast. The model corre
 
 Javier Palau Alegria
 - Contact email: javier.palau.alegria@gmail.com
-- [LinkedIn](www.linkedin.com/in/javier-palau-alegria-215444237/)
+- [LinkedIn](https://www.linkedin.com/in/javier-palau-alegria-215444237/)
 
 ## License
 
